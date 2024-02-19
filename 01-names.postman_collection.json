@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "a0b866c1-5503-4fe5-a10f-be9a97d94087",
+		"name": "01-names",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19282020"
+	},
+	"item": [
+		{
+			"name": "CreateNames",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"andrea\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{server}}{{puerto\n}}/names",
+					"host": [
+						"{{server}}{{puerto\n}}"
+					],
+					"path": [
+						"names"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetNames",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "start",
+							"value": "J",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}{{puerto\n}}/names",
+					"host": [
+						"{{server}}{{puerto\n}}"
+					],
+					"path": [
+						"names"
+					],
+					"query": [
+						{
+							"key": "start",
+							"value": "je",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateName",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "newName",
+							"value": "juan",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server}}{{puerto\n}}/names/jesus",
+					"host": [
+						"{{server}}{{puerto\n}}"
+					],
+					"path": [
+						"names",
+						"jesus"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{server}}{{puerto\n}}/names/jesus",
+					"host": [
+						"{{server}}{{puerto\n}}"
+					],
+					"path": [
+						"names",
+						"jesus"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
